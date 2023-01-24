@@ -1,0 +1,26 @@
+<form (ngSubmit)="onSubmit()" ngNativeValidate>
+  <label>Please enter your information below:</label>
+  <div class="form-group">
+    <label>What is your age?</label>
+    <input type="number" name="question1" [(ngModel)]="age" min="0"
+           oninput="validity.valid||(value='');" required>
+  </div>
+  <div class="form-group">
+    <label>Are you a student?</label>
+    <input type="checkbox" name="question2" [(ngModel)]="isStudent">
+  </div>
+  <div class="form-group">
+    <label>What is your income?</label>
+    <input type="number" name="question3" [(ngModel)]="income" min="0"
+           oninput="validity.valid||(value='');" required>
+  </div>
+  <button type="submit">Submit</button>
+</form>
+
+
+<div class="products" *ngIf="info">
+  <label class="product-label" >Best option for your account:</label>
+  <div class="product" *ngFor="let i of info">
+    {{i}}
+  </div>
+</div>
