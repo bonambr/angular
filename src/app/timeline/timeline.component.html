@@ -1,0 +1,31 @@
+<!-- timeline.component.html -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h1>Timeline</h1>
+      </div>
+      <ul class="timeline">
+        <!--<li *ngFor="let item of timelineItems">
+          <p>Constructor/Chassis: {{item.constructorChassis}}</p>
+          <p>Driver: {{item.driver}}</p>
+          <p>ID: {{item.id}}</p>
+          <p>Podiums: {{item.podiums}}</p>
+          <p>Points: {{item.points}}</p>
+          <p>Poles: {{item.poles}}</p>
+          <p>Season: {{item.season}}</p>
+          <p>Wins: {{item.wins}}</p>
+        </li>-->
+        <li class="timeline-item" *ngFor="let item of timelineItems; let i = index;">
+          <div class="timeline-badge">{{ startingYear + i }}</div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">{{ item.text }}</h4>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
